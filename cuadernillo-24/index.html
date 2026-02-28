@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏆 EXAMEN FINAL A1 - Cuadernillo 24</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--primary:#B45309;--secondary:#D97706;--accent:#F59E0B;--green:#22C55E;--red:#EF4444;--dark:#451A03;--light:#FFFBEB;--text:#1E293B;--muted:#64748B;--border:#FDE68A;--correct-bg:#DCFCE7;--correct-border:#22C55E;--wrong-bg:#FEE2E2;--wrong-border:#EF4444;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Nunito',sans-serif;background:var(--light);color:var(--text);line-height:1.6;}
+  .header{background:linear-gradient(135deg,#451A03 0%,#B45309 55%,#D97706 100%);padding:2.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+  .header::after{content:'';position:absolute;bottom:-20px;left:0;right:0;height:42px;background:var(--light);border-radius:50% 50% 0 0/42px 42px 0 0;}
+  .header-badge{display:inline-block;background:rgba(255,255,255,.22);color:white;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:.3rem 1rem;border-radius:999px;margin-bottom:.8rem;border:1px solid rgba(255,255,255,.35);}
+  .header h1{font-family:'Baloo 2',cursive;font-size:clamp(1.8rem,5vw,3rem);font-weight:800;color:white;text-shadow:3px 3px 0 rgba(0,0,0,.15);margin-bottom:.3rem;}
+  .header p{color:rgba(255,255,255,.9);font-size:1.05rem;font-weight:600;}
+  .student-info{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem;}
+  .info-field{background:rgba(255,255,255,.92);border-radius:12px;padding:.45rem 1.1rem;display:flex;align-items:center;gap:.5rem;font-size:.88rem;font-weight:700;color:var(--dark);}
+  .info-field span{color:var(--muted);font-weight:600;}
+  .info-field input{border:none;outline:none;background:transparent;font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:700;color:var(--dark);width:120px;}
+  .container{max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem;}
+  .tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:2rem;}
+  @media(max-width:600px){.tips-grid{grid-template-columns:1fr;}}
+  .tip-card{background:white;border-radius:16px;padding:1.4rem;border:2px solid var(--border);}
+  .tip-card h3{font-family:'Baloo 2',cursive;font-size:1rem;font-weight:700;margin-bottom:.7rem;}
+  .tip-card ul{list-style:none;}
+  .tip-card ul li{padding:.22rem 0;font-size:.88rem;display:flex;align-items:flex-start;gap:.4rem;}
+  .tip-card ul li::before{content:'•';color:var(--primary);font-weight:900;}
+  .section{background:white;border-radius:20px;padding:2rem;margin-bottom:2rem;border:2px solid #E2E8F0;box-shadow:0 4px 20px rgba(0,0,0,.05);position:relative;overflow:hidden;}
+  .section::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--primary),var(--secondary),var(--accent));}
+  .section-title{font-family:'Baloo 2',cursive;font-size:1.4rem;font-weight:800;color:var(--dark);margin-bottom:.3rem;}
+  .section-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1.5rem;font-weight:600;}
+  .grammar-box{background:linear-gradient(135deg,#EDE9FE,#DDD6FE);border:2px solid #8B5CF6;border-radius:14px;padding:1.3rem 1.5rem;margin-bottom:1.2rem;}
+  .grammar-box h4{font-family:'Baloo 2',cursive;color:#5B21B6;font-size:1rem;font-weight:800;margin-bottom:.8rem;}
+  table{width:100%;border-collapse:collapse;margin-bottom:.8rem;font-size:.88rem;}
+  th{background:linear-gradient(135deg,#451A03,#B45309);color:white;padding:.6rem .9rem;text-align:left;font-weight:700;font-size:.82rem;}
+  th:first-child{border-radius:8px 0 0 0;}th:last-child{border-radius:0 8px 0 0;}
+  td{padding:.55rem .9rem;border-bottom:1px solid #E2E8F0;vertical-align:middle;font-size:.88rem;}
+  tr:nth-child(even) td{background:#F8FAFC;}tr:last-child td{border-bottom:none;}
+  .exercise-label{font-family:'Baloo 2',cursive;font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem;}
+  .exercise-label .badge{background:var(--primary);color:white;padding:.18rem .65rem;border-radius:999px;font-size:.78rem;font-weight:800;}
+  .exercise-line{display:flex;align-items:center;gap:.6rem;margin-bottom:.75rem;flex-wrap:wrap;}
+  .exercise-num{background:var(--dark);color:white;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0;}
+  .exercise-text{font-size:.93rem;color:var(--text);}
+  .answer-input{border:2px solid #E2E8F0;border-radius:8px;padding:.33rem .75rem;font-family:'Nunito',sans-serif;font-size:.93rem;font-weight:700;outline:none;transition:border-color .2s,background .2s;background:#F8FAFC;}
+  .answer-input:focus{border-color:var(--primary);background:white;}
+  .answer-input.correct{border-color:var(--correct-border)!important;background:var(--correct-bg)!important;color:#166534;}
+  .answer-input.wrong{border-color:var(--wrong-border)!important;background:var(--wrong-bg)!important;color:#991B1B;}
+  .feedback-icon{font-size:1.1rem;opacity:0;transition:opacity .2s;}
+  .feedback-icon.visible{opacity:1;}
+  .hint-text{font-size:.78rem;color:#991B1B;font-weight:700;opacity:0;transition:opacity .2s;}
+  .hint-text.visible{opacity:1;}
+  .check-btn{background:linear-gradient(135deg,var(--primary),#451A03);color:white;border:none;border-radius:12px;padding:.55rem 1.4rem;font-family:'Baloo 2',cursive;font-size:.95rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:.4rem;margin-top:.9rem;transition:transform .15s;box-shadow:0 4px 12px rgba(0,0,0,.15);}
+  .check-btn:hover{transform:translateY(-2px);}
+  .score-display{display:none;background:linear-gradient(135deg,#ECFDF5,#D1FAE5);border:2px solid var(--green);border-radius:12px;padding:.7rem 1.1rem;margin-top:.7rem;font-weight:700;color:#065F46;font-size:.92rem;align-items:center;gap:.4rem;}
+  .score-display.visible{display:flex;}
+  .mc-options{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin:.4rem 0 .4rem 2rem;}
+  @media(max-width:500px){.mc-options{grid-template-columns:1fr;}}
+  .mc-option{padding:.42rem .85rem;border:2px solid #E2E8F0;border-radius:10px;cursor:pointer;font-size:.86rem;font-weight:700;transition:all .15s;background:white;text-align:left;}
+  .mc-option:hover{border-color:var(--primary);}
+  .mc-option.correct{border-color:var(--green);background:var(--correct-bg);color:#166534;pointer-events:none;}
+  .mc-option.wrong{border-color:var(--red);background:var(--wrong-bg);color:#991B1B;pointer-events:none;}
+  .mc-option.reveal-correct{border-color:var(--green);background:var(--correct-bg);color:#166534;}
+  .open-area{width:100%;border:2px solid #E2E8F0;border-radius:12px;padding:.8rem 1rem;font-family:'Nunito',sans-serif;font-size:.93rem;min-height:88px;resize:vertical;outline:none;line-height:1.6;}
+  .open-area:focus{border-color:var(--primary);}
+  .self-check{background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border:2px solid var(--green);border-radius:16px;padding:1.5rem;margin-bottom:2rem;}
+  .self-check h3{font-family:'Baloo 2',cursive;font-size:1.2rem;font-weight:800;color:#065F46;margin-bottom:1rem;}
+  .check-item{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid rgba(34,197,94,.2);gap:1rem;flex-wrap:wrap;}
+  .check-item:last-child{border-bottom:none;}
+  .check-item p{font-size:.88rem;font-weight:600;color:#065F46;}
+  .emoji-options{display:flex;gap:.45rem;}
+  .emoji-btn{font-size:1.35rem;cursor:pointer;padding:.18rem .35rem;border-radius:8px;transition:transform .15s;border:2px solid transparent;background:none;line-height:1;}
+  .emoji-btn:hover{transform:scale(1.2);}
+  .emoji-btn.selected{background:rgba(34,197,94,.15);border-color:var(--green);}
+  .autocorrect-banner{background:linear-gradient(135deg,#EDE9FE,#DDD6FE);border:2px solid #8B5CF6;border-radius:14px;padding:1rem 1.4rem;margin-bottom:2rem;display:flex;align-items:center;gap:1rem;font-size:.9rem;font-weight:600;color:#4C1D95;}
+  .autocorrect-banner .icon{font-size:1.8rem;flex-shrink:0;}
+  .total-score-container{position:fixed;top:1rem;right:1rem;background:white;border:3px solid var(--primary);border-radius:16px;padding:.65rem 1.1rem;box-shadow:0 6px 24px rgba(0,0,0,.12);z-index:100;text-align:center;min-width:95px;}
+  .score-label{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);}
+  .score-number{font-family:'Baloo 2',cursive;font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;}
+  .congrats{background:linear-gradient(135deg,var(--primary),var(--secondary));color:white;border-radius:20px;padding:2.5rem;text-align:center;margin-bottom:2rem;}
+  .congrats h2{font-family:'Baloo 2',cursive;font-size:2rem;font-weight:800;margin-bottom:.5rem;}
+  .congrats p{font-size:1.05rem;opacity:.92;font-weight:600;}
+  .next-badge{display:inline-block;background:rgba(255,255,255,.22);border:2px solid rgba(255,255,255,.45);color:white;padding:.55rem 1.4rem;border-radius:999px;font-weight:800;font-size:1rem;margin-top:1rem;}
+  hr.divider{border:none;border-top:2px solid #E2E8F0;margin:1.5rem 0;}
+  @media(max-width:600px){.total-score-container{top:auto;bottom:1rem;right:1rem;}.section{padding:1.3rem;}.container{padding:1.2rem 1rem 4rem;}}
+</style>
+</head>
+<body>
+<div class="total-score-container"><div class="score-label">Puntuación</div><div class="score-number" id="totalScore">0%</div></div>
+<div class="header">
+  <div class="header-badge">Cuadernillo 24 · Nivel A1</div>
+  <h1>🏆 EXAMEN FINAL A1</h1>
+  <p>Español para Extranjeros · A1 Final Exam · Prueba final</p>
+  <div class="student-info">
+    <div class="info-field"><span>Nombre:</span><input type="text" placeholder="Tu nombre aquí"></div>
+    <div class="info-field"><span>País:</span><input type="text" placeholder="Tu país"></div>
+    <div class="info-field"><span>Fecha:</span><input type="text" placeholder="dd/mm/aaaa"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="autocorrect-banner"><span class="icon">🤖</span><div><strong>¡Cuadernillo autocorregible!</strong> Escribe tu respuesta y pulsa <em>Comprobar</em>. ✅ verde = correcto · ❌ rojo = incorrecto.</div></div>
+  <div class="section">
+    <div class="section-title">📚 Gramática / Grammar</div>
+    <div class="grammar-box"><h4>📋 Instrucciones / Instructions</h4><p style="font-size:.88rem;color:#4C1D95;font-weight:700;margin-top:.4rem;">Este es tu examen final del Nivel A1. ¡Tú puedes! 💪</p><p style="font-size:.88rem;color:#4C1D95;font-weight:700;margin-top:.4rem;">Lee cada pregunta con atención antes de responder.</p><p style="font-size:.88rem;color:#4C1D95;font-weight:700;margin-top:.4rem;">Tiempo recomendado: 45-60 minutos.</p><p style="font-size:.88rem;color:#4C1D95;font-weight:700;margin-top:.4rem;">Máxima puntuación: 100 puntos.</p></div>
+  </div>
+  <div class="section"><div class="section-title">📝 Parte 1: Vocabulario (20 pts)</div><div class="section-subtitle">Vocabulary — 2 pts each</div><div class="exercise-label"><div class="badge">1</div> Escribe la palabra correcta</div><div id="ex24a"><div class="exercise-line">
+                      <div class="exercise-num">1</div>
+                      <span class="exercise-text">El padre de mi madre es mi </span>
+                      <input class="answer-input" data-answer="abuelo" placeholder="..." style="width:100px;">
+                      <span class="exercise-text">(family) 👴</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">2</div>
+                      <span class="exercise-text">Duermo en el </span>
+                      <input class="answer-input" data-answer="dormitorio" placeholder="..." style="width:130px;">
+                      <span class="exercise-text">(house) 🛏️</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">3</div>
+                      <span class="exercise-text">Para comprar pan voy a la </span>
+                      <input class="answer-input" data-answer="panadería" placeholder="..." style="width:120px;">
+                      <span class="exercise-text">(city) 🥐</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">4</div>
+                      <span class="exercise-text">El mes después de marzo es </span>
+                      <input class="answer-input" data-answer="abril" placeholder="..." style="width:90px;">
+                      <span class="exercise-text">(months) 🌸</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">5</div>
+                      <span class="exercise-text">El contrario de simpático es </span>
+                      <input class="answer-input" data-answer="antipático" placeholder="..." style="width:130px;">
+                      <span class="exercise-text">(character) 😤</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">6</div>
+                      <span class="exercise-text">Para decir la hora: Son las tres y </span>
+                      <input class="answer-input" data-answer="media" placeholder="..." style="width:90px;">
+                      <span class="exercise-text">(time) 🕒</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">7</div>
+                      <span class="exercise-text">Agua, café, zumo son </span>
+                      <input class="answer-input" data-answer="bebidas" placeholder="..." style="width:110px;">
+                      <span class="exercise-text">(food) 🥤</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">8</div>
+                      <span class="exercise-text">El primer día de la semana es </span>
+                      <input class="answer-input" data-answer="lunes" placeholder="..." style="width:90px;">
+                      <span class="exercise-text">(days) 📅</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">9</div>
+                      <span class="exercise-text">El contrario de mucho es </span>
+                      <input class="answer-input" data-answer="poco" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">(quantifiers) 📉</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">10</div>
+                      <span class="exercise-text">Para agradecer dices </span>
+                      <input class="answer-input" data-answer="gracias" placeholder="..." style="width:100px;">
+                      <span class="exercise-text">(courtesy) 😊</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div></div><button class="check-btn" onclick="checkFillIn('ex24a')">✅ Comprobar</button><div id="ex24a-score" class="score-display"></div></div><div class="section"><div class="section-title">📝 Parte 2: Gramática (40 pts)</div><div class="section-subtitle">Grammar — 2 pts each</div><div class="exercise-label"><div class="badge">2</div> SER/ESTAR/TENER — elige y conjuga</div><div id="ex24b"><div class="exercise-line">
+                      <div class="exercise-num">1</div>
+                      <span class="exercise-text">Yo </span>
+                      <input class="answer-input" data-answer="soy" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">de España. 🇪🇸</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">2</div>
+                      <span class="exercise-text">Tú </span>
+                      <input class="answer-input" data-answer="estás" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">cansado hoy. 😴</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">3</div>
+                      <span class="exercise-text">Ella </span>
+                      <input class="answer-input" data-answer="tiene" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">25 años. 🎂</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">4</div>
+                      <span class="exercise-text">El restaurante </span>
+                      <input class="answer-input" data-answer="está" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">en el centro. 📍</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">5</div>
+                      <span class="exercise-text">Nosotros </span>
+                      <input class="answer-input" data-answer="somos" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">estudiantes. 📚</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div></div><button class="check-btn" onclick="checkFillIn('ex24b')">✅ Comprobar</button><div id="ex24b-score" class="score-display"></div><hr class="divider"><div class="exercise-label"><div class="badge">3</div> Conjuga el verbo entre paréntesis</div><div id="ex24c"><div class="exercise-line">
+                      <div class="exercise-num">1</div>
+                      <span class="exercise-text">Yo </span>
+                      <input class="answer-input" data-answer="me llamo" placeholder="..." style="width:130px;">
+                      <span class="exercise-text">Carlos. (llamarse) 👦</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">2</div>
+                      <span class="exercise-text">Tú </span>
+                      <input class="answer-input" data-answer="comes" placeholder="..." style="width:90px;">
+                      <span class="exercise-text">mucho. (comer) 🍽️</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">3</div>
+                      <span class="exercise-text">Ella </span>
+                      <input class="answer-input" data-answer="vive" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">en París. (vivir) 🗼</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">4</div>
+                      <span class="exercise-text">Nosotros </span>
+                      <input class="answer-input" data-answer="estudiamos" placeholder="..." style="width:130px;">
+                      <span class="exercise-text">español. (estudiar) 📖</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">5</div>
+                      <span class="exercise-text">Ellos </span>
+                      <input class="answer-input" data-answer="se duchan" placeholder="..." style="width:140px;">
+                      <span class="exercise-text">por la mañana. (ducharse)</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">6</div>
+                      <span class="exercise-text">Vosotros </span>
+                      <input class="answer-input" data-answer="escribís" placeholder="..." style="width:110px;">
+                      <span class="exercise-text">bien. (escribir) ✍️</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">7</div>
+                      <span class="exercise-text">¿Tú </span>
+                      <input class="answer-input" data-answer="lees" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">el periódico? (leer) 📰</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">8</div>
+                      <span class="exercise-text">Yo </span>
+                      <input class="answer-input" data-answer="me levanto" placeholder="..." style="width:140px;">
+                      <span class="exercise-text">tarde los domingos. (levantarse)</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">9</div>
+                      <span class="exercise-text">Él </span>
+                      <input class="answer-input" data-answer="va" placeholder="..." style="width:70px;">
+                      <span class="exercise-text">al colegio. (ir) 🏫</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">10</div>
+                      <span class="exercise-text">¿Cuántos años </span>
+                      <input class="answer-input" data-answer="tienes" placeholder="..." style="width:90px;">
+                      <span class="exercise-text">tú? (tener) 🎂</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div></div><button class="check-btn" onclick="checkFillIn('ex24c')">✅ Comprobar</button><div id="ex24c-score" class="score-display"></div></div><div class="section"><div class="section-title">📝 Parte 3: Comprensión y escritura (40 pts)</div><div class="section-subtitle">Reading and writing</div><div class="exercise-label"><div class="badge">4</div> HAY o ESTÁ/ESTÁN — completa</div><div id="ex24d"><div class="exercise-line">
+                      <div class="exercise-num">1</div>
+                      <span class="exercise-text">En mi barrio </span>
+                      <input class="answer-input" data-answer="hay" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">un parque muy grande. 🌳</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">2</div>
+                      <span class="exercise-text">El parque </span>
+                      <input class="answer-input" data-answer="está" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">cerca de mi casa. 📍</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">3</div>
+                      <span class="exercise-text">¿</span>
+                      <input class="answer-input" data-answer="Hay" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">una farmacia cerca? 💊</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">4</div>
+                      <span class="exercise-text">Los niños </span>
+                      <input class="answer-input" data-answer="están" placeholder="..." style="width:90px;">
+                      <span class="exercise-text">en el parque. 👦</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">5</div>
+                      <span class="exercise-text">No </span>
+                      <input class="answer-input" data-answer="hay" placeholder="..." style="width:80px;">
+                      <span class="exercise-text">supermercado en esta calle.</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div></div><button class="check-btn" onclick="checkFillIn('ex24d')">✅ Comprobar</button><div id="ex24d-score" class="score-display"></div><hr class="divider"><div class="exercise-label"><div class="badge">5</div> Interrogativos — completa la pregunta</div><div id="ex24e"><div class="exercise-line">
+                      <div class="exercise-num">1</div>
+                      <span class="exercise-text">¿</span>
+                      <input class="answer-input" data-answer="Cómo" placeholder="..." style="width:90px;">
+                      <span class="exercise-text">te llamas? — Me llamo Ana.</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">2</div>
+                      <span class="exercise-text">¿</span>
+                      <input class="answer-input" data-answer="Cuántos" placeholder="..." style="width:110px;">
+                      <span class="exercise-text">años tienes? — 20 años.</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">3</div>
+                      <span class="exercise-text">¿</span>
+                      <input class="answer-input" data-answer="Dónde" placeholder="..." style="width:90px;">
+                      <span class="exercise-text">vives? — En Barcelona.</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">4</div>
+                      <span class="exercise-text">¿</span>
+                      <input class="answer-input" data-answer="Por qué" placeholder="..." style="width:100px;">
+                      <span class="exercise-text">estudias español? — Porque me gusta.</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div><div class="exercise-line">
+                      <div class="exercise-num">5</div>
+                      <span class="exercise-text">¿</span>
+                      <input class="answer-input" data-answer="Cuál" placeholder="..." style="width:90px;">
+                      <span class="exercise-text">es tu color favorito? — El azul.</span>
+                      <span class="feedback-icon">❓</span><span class="hint-text"></span>
+                    </div></div><button class="check-btn" onclick="checkFillIn('ex24e')">✅ Comprobar</button><div id="ex24e-score" class="score-display"></div><hr class="divider"><div class="exercise-label"><div class="badge">6</div> Escribe una carta de presentación completa (50+ palabras)</div><div id="ex24f"></div><textarea class="open-area" placeholder="¡Hola! Me llamo... Soy de... Tengo... años. Soy estudiante/trabajo de... Vivo en... con mi familia. Mi familia es... Tengo... Me gusta(n)... No me gusta(n)... Mi rutina: Me levanto a las... Estudio/trabajo... Los fines de semana... ¡Hasta pronto!"></textarea></div>
+  <div class="self-check">
+    <h3>✅ Autoevaluación / Self-check</h3>
+    <div class="check-item"><p>He completado el examen final A1 🏆</p><div class="emoji-options">
+      <button class="emoji-btn" onclick="selectEmoji(this)">😀</button>
+      <button class="emoji-btn" onclick="selectEmoji(this)">🙂</button>
+      <button class="emoji-btn" onclick="selectEmoji(this)">😐</button>
+    </div></div><div class="check-item"><p>Conozco el vocabulario de los 24 cuadernillos</p><div class="emoji-options">
+      <button class="emoji-btn" onclick="selectEmoji(this)">😀</button>
+      <button class="emoji-btn" onclick="selectEmoji(this)">🙂</button>
+      <button class="emoji-btn" onclick="selectEmoji(this)">😐</button>
+    </div></div><div class="check-item"><p>Puedo usar los verbos y la gramática A1</p><div class="emoji-options">
+      <button class="emoji-btn" onclick="selectEmoji(this)">😀</button>
+      <button class="emoji-btn" onclick="selectEmoji(this)">🙂</button>
+      <button class="emoji-btn" onclick="selectEmoji(this)">😐</button>
+    </div></div><div class="check-item"><p>Estoy listo/a para empezar el Nivel A2 🚀</p><div class="emoji-options">
+      <button class="emoji-btn" onclick="selectEmoji(this)">😀</button>
+      <button class="emoji-btn" onclick="selectEmoji(this)">🙂</button>
+      <button class="emoji-btn" onclick="selectEmoji(this)">😐</button>
+    </div></div>
+  </div>
+  <div class="congrats">
+    <h2>🎉 ¡Excelente trabajo!</h2>
+    <p>Has completado el Cuadernillo 24!</p>
+    <div class="next-badge">🚀 ¡Enhorabuena! Estás list@ para el Nivel A2</div>
+  </div>
+</div>
+<script>
+function normalizeAnswer(str){return str.trim().toLowerCase().replace(/á/g,'a').replace(/é/g,'e').replace(/í/g,'i').replace(/ó/g,'o').replace(/ú/g,'u').replace(/ü/g,'u').replace(/ñ/g,'n');}
+function checkFillIn(id){const s=document.getElementById(id);const inputs=s.querySelectorAll('.answer-input');let c=0;inputs.forEach(i=>{const u=normalizeAnswer(i.value);const a=normalizeAnswer(i.dataset.answer);const l=i.closest('.exercise-line');const fi=l.querySelector('.feedback-icon');const ht=l.querySelector('.hint-text');i.classList.remove('correct','wrong');fi.classList.remove('visible');ht.classList.remove('visible');if(u===a){i.classList.add('correct');fi.textContent='✅';fi.classList.add('visible');c++;}else if(u!==''){i.classList.add('wrong');fi.textContent='❌';fi.classList.add('visible');ht.textContent='→ '+i.dataset.answer;ht.classList.add('visible');}else{fi.textContent='❓';fi.classList.add('visible');}});if(Array.from(inputs).filter(i=>i.value.trim()!=='').length>0){const el=document.getElementById(id+'-score');const pct=Math.round((c/inputs.length)*100);el.innerHTML=(pct===100?'🎉':pct>=70?'👍':'💪')+' '+c+'/'+inputs.length+' correctas ('+pct+'%)';el.classList.add('visible');updateTotalScore();}}
+const mcScores={};function checkMC(btn,sId){const parent=btn.closest('.exercise-line');const buttons=parent.querySelectorAll('.mc-option');if(!mcScores[sId])mcScores[sId]={correct:0,total:0,answered:new Set()};const qId=Array.from(parent.parentElement.querySelectorAll('.exercise-line')).indexOf(parent);if(mcScores[sId].answered.has(qId))return;mcScores[sId].answered.add(qId);mcScores[sId].total++;if(btn.dataset.correct==='true'){btn.classList.add('correct');mcScores[sId].correct++;}else{btn.classList.add('wrong');buttons.forEach(b=>{if(b.dataset.correct==='true')b.classList.add('reveal-correct');});}buttons.forEach(b=>{b.style.pointerEvents='none';});const el=document.getElementById(sId+'-score');const s=mcScores[sId];const pct=Math.round((s.correct/s.total)*100);el.innerHTML=(pct===100?'🎉':pct>=70?'👍':'💪')+' '+s.correct+'/'+s.total+' correctas ('+pct+'%)';el.classList.add('visible');updateTotalScore();}
+function updateTotalScore(){let c=0,p=0;["ex24a", "ex24b", "ex24c", "ex24d", "ex24e"].forEach(id=>{const s=document.getElementById(id);if(s)s.querySelectorAll('.answer-input').forEach(i=>{if(i.value.trim()!==''){p++;if(i.classList.contains('correct'))c++;}});});Object.values(mcScores).forEach(s=>{c+=s.correct;p+=s.total;});const pct=p>0?Math.round((c/p)*100):0;document.getElementById('totalScore').textContent=pct+'%';document.querySelector('.total-score-container').style.borderColor=pct>=80?'#22C55E':pct>=60?'#F59E0B':'#B45309';}
+function selectEmoji(btn){const g=btn.closest('.emoji-options');g.querySelectorAll('.emoji-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');}
+</script>
+</body>
+</html>

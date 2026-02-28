@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📖 VERBOS -ER e -IR - Cuadernillo 13</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--primary:#0891B2;--secondary:#6D28D9;--accent:#22C55E;--green:#22C55E;--red:#EF4444;--dark:#164E63;--light:#ECFEFF;--text:#1E293B;--muted:#64748B;--border:#A5F3FC;--correct-bg:#DCFCE7;--correct-border:#22C55E;--wrong-bg:#FEE2E2;--wrong-border:#EF4444;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Nunito',sans-serif;background:var(--light);color:var(--text);line-height:1.6;}
+  .header{background:linear-gradient(135deg,#164E63 0%,#0891B2 50%,#6D28D9 100%);padding:2.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+  .header::after{content:'';position:absolute;bottom:-20px;left:0;right:0;height:42px;background:var(--light);border-radius:50% 50% 0 0/42px 42px 0 0;}
+  .header-badge{display:inline-block;background:rgba(255,255,255,.22);color:white;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:.3rem 1rem;border-radius:999px;margin-bottom:.8rem;border:1px solid rgba(255,255,255,.35);}
+  .header h1{font-family:'Baloo 2',cursive;font-size:clamp(2rem,6vw,3.2rem);font-weight:800;color:white;text-shadow:3px 3px 0 rgba(0,0,0,.15);margin-bottom:.3rem;}
+  .header p{color:rgba(255,255,255,.9);font-size:1.05rem;font-weight:600;}
+  .student-info{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem;}
+  .info-field{background:rgba(255,255,255,.92);border-radius:12px;padding:.45rem 1.1rem;display:flex;align-items:center;gap:.5rem;font-size:.88rem;font-weight:700;color:var(--dark);}
+  .info-field span{color:var(--muted);font-weight:600;}
+  .info-field input{border:none;outline:none;background:transparent;font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:700;color:var(--dark);width:120px;}
+  .container{max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem;}
+  .tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:2rem;}
+  @media(max-width:600px){.tips-grid{grid-template-columns:1fr;}}
+  .tip-card{background:white;border-radius:16px;padding:1.4rem;border:2px solid var(--border);}
+  .tip-card h3{font-family:'Baloo 2',cursive;font-size:1rem;font-weight:700;margin-bottom:.7rem;}
+  .tip-card ul{list-style:none;}
+  .tip-card ul li{padding:.22rem 0;font-size:.88rem;display:flex;align-items:flex-start;gap:.4rem;}
+  .tip-card ul li::before{content:'•';color:var(--primary);font-weight:900;}
+  .section{background:white;border-radius:20px;padding:2rem;margin-bottom:2rem;border:2px solid #E2E8F0;box-shadow:0 4px 20px rgba(0,0,0,.05);position:relative;overflow:hidden;}
+  .section::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--primary),var(--secondary),var(--accent));}
+  .section-title{font-family:'Baloo 2',cursive;font-size:1.5rem;font-weight:800;color:var(--dark);margin-bottom:.3rem;}
+  .section-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1.5rem;font-weight:600;}
+  .grammar-box{background:linear-gradient(135deg,#EDE9FE,#DDD6FE);border:2px solid #8B5CF6;border-radius:14px;padding:1.3rem 1.5rem;margin-bottom:1.5rem;}
+  .grammar-box h4{font-family:'Baloo 2',cursive;color:#5B21B6;font-size:1rem;font-weight:800;margin-bottom:.8rem;}
+  .grammar-box p{font-size:.88rem;color:#4C1D95;font-weight:600;margin-top:.6rem;}
+  table{width:100%;border-collapse:collapse;margin-bottom:1rem;font-size:.9rem;}
+  th{background:linear-gradient(135deg,#164E63,#0891B2);color:white;padding:.65rem 1rem;text-align:left;font-weight:700;font-size:.83rem;}
+  th:first-child{border-radius:8px 0 0 0;}th:last-child{border-radius:0 8px 0 0;}
+  td{padding:.6rem 1rem;border-bottom:1px solid #E2E8F0;vertical-align:middle;}
+  tr:nth-child(even) td{background:#F8FAFC;}tr:last-child td{border-bottom:none;}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
+  @media(max-width:600px){.compare-grid{grid-template-columns:1fr;}}
+  .compare-card{background:white;border-radius:14px;padding:1.1rem;border:2px solid var(--border);text-align:center;}
+  .compare-card h5{font-family:'Baloo 2',cursive;font-size:1rem;font-weight:800;margin-bottom:.6rem;}
+  .compare-card.ar{border-color:#22C55E;background:#F0FDF4;}
+  .compare-card.er{border-color:#0891B2;background:#ECFEFF;}
+  .compare-card.ir{border-color:#6D28D9;background:#FAF5FF;}
+  .compare-card.ar h5{color:#16A34A;}
+  .compare-card.er h5{color:#0891B2;}
+  .compare-card.ir h5{color:#6D28D9;}
+  .compare-card ul{list-style:none;font-size:.83rem;}
+  .compare-card ul li{padding:.18rem 0;font-weight:600;}
+  .exercise-label{font-family:'Baloo 2',cursive;font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem;}
+  .exercise-label .badge{background:var(--primary);color:white;padding:.18rem .65rem;border-radius:999px;font-size:.78rem;font-weight:800;}
+  .exercise-line{display:flex;align-items:center;gap:.6rem;margin-bottom:.75rem;flex-wrap:wrap;}
+  .exercise-num{background:var(--dark);color:white;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0;}
+  .exercise-text{font-size:.93rem;color:var(--text);}
+  .answer-input{border:2px solid #E2E8F0;border-radius:8px;padding:.33rem .75rem;font-family:'Nunito',sans-serif;font-size:.93rem;font-weight:700;outline:none;transition:border-color .2s,background .2s;background:#F8FAFC;}
+  .answer-input:focus{border-color:var(--primary);background:white;}
+  .answer-input.correct{border-color:var(--correct-border)!important;background:var(--correct-bg)!important;color:#166534;}
+  .answer-input.wrong{border-color:var(--wrong-border)!important;background:var(--wrong-bg)!important;color:#991B1B;}
+  .feedback-icon{font-size:1.1rem;opacity:0;transition:opacity .2s;}
+  .feedback-icon.visible{opacity:1;}
+  .hint-text{font-size:.78rem;color:#991B1B;font-weight:700;opacity:0;transition:opacity .2s;}
+  .hint-text.visible{opacity:1;}
+  .check-btn{background:linear-gradient(135deg,var(--primary),var(--dark));color:white;border:none;border-radius:12px;padding:.55rem 1.4rem;font-family:'Baloo 2',cursive;font-size:.98rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:.4rem;margin-top:.9rem;transition:transform .15s;box-shadow:0 4px 12px rgba(8,145,178,.28);}
+  .check-btn:hover{transform:translateY(-2px);}
+  .score-display{display:none;background:linear-gradient(135deg,#ECFDF5,#D1FAE5);border:2px solid var(--green);border-radius:12px;padding:.7rem 1.1rem;margin-top:.7rem;font-weight:700;color:#065F46;font-size:.92rem;align-items:center;gap:.4rem;}
+  .score-display.visible{display:flex;}
+  .mc-options{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin:.4rem 0 .4rem 2rem;}
+  @media(max-width:500px){.mc-options{grid-template-columns:1fr;}}
+  .mc-option{padding:.42rem .85rem;border:2px solid #E2E8F0;border-radius:10px;cursor:pointer;font-size:.86rem;font-weight:700;transition:all .15s;background:white;text-align:left;}
+  .mc-option:hover{border-color:var(--primary);}
+  .mc-option.correct{border-color:var(--green);background:var(--correct-bg);color:#166534;pointer-events:none;}
+  .mc-option.wrong{border-color:var(--red);background:var(--wrong-bg);color:#991B1B;pointer-events:none;}
+  .mc-option.reveal-correct{border-color:var(--green);background:var(--correct-bg);color:#166534;}
+  .open-area{width:100%;border:2px solid #E2E8F0;border-radius:12px;padding:.8rem 1rem;font-family:'Nunito',sans-serif;font-size:.93rem;min-height:88px;resize:vertical;outline:none;line-height:1.6;}
+  .open-area:focus{border-color:var(--primary);}
+  .self-check{background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border:2px solid var(--green);border-radius:16px;padding:1.5rem;margin-bottom:2rem;}
+  .self-check h3{font-family:'Baloo 2',cursive;font-size:1.2rem;font-weight:800;color:#065F46;margin-bottom:1rem;}
+  .check-item{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid rgba(34,197,94,.2);gap:1rem;flex-wrap:wrap;}
+  .check-item:last-child{border-bottom:none;}
+  .check-item p{font-size:.88rem;font-weight:600;color:#065F46;}
+  .emoji-options{display:flex;gap:.45rem;}
+  .emoji-btn{font-size:1.35rem;cursor:pointer;padding:.18rem .35rem;border-radius:8px;transition:transform .15s;border:2px solid transparent;background:none;line-height:1;}
+  .emoji-btn:hover{transform:scale(1.2);}
+  .emoji-btn.selected{background:rgba(34,197,94,.15);border-color:var(--green);}
+  .autocorrect-banner{background:linear-gradient(135deg,#EDE9FE,#DDD6FE);border:2px solid #8B5CF6;border-radius:14px;padding:1rem 1.4rem;margin-bottom:2rem;display:flex;align-items:center;gap:1rem;font-size:.9rem;font-weight:600;color:#4C1D95;}
+  .autocorrect-banner .icon{font-size:1.8rem;flex-shrink:0;}
+  .total-score-container{position:fixed;top:1rem;right:1rem;background:white;border:3px solid var(--primary);border-radius:16px;padding:.65rem 1.1rem;box-shadow:0 6px 24px rgba(8,145,178,.18);z-index:100;text-align:center;min-width:95px;}
+  .score-label{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);}
+  .score-number{font-family:'Baloo 2',cursive;font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;}
+  .congrats{background:linear-gradient(135deg,var(--primary),var(--secondary));color:white;border-radius:20px;padding:2.5rem;text-align:center;margin-bottom:2rem;}
+  .congrats h2{font-family:'Baloo 2',cursive;font-size:2rem;font-weight:800;margin-bottom:.5rem;}
+  .congrats p{font-size:1.05rem;opacity:.92;font-weight:600;}
+  .next-badge{display:inline-block;background:rgba(255,255,255,.22);border:2px solid rgba(255,255,255,.45);color:white;padding:.55rem 1.4rem;border-radius:999px;font-weight:800;font-size:1rem;margin-top:1rem;}
+  hr.divider{border:none;border-top:2px solid #E2E8F0;margin:1.5rem 0;}
+  @media(max-width:600px){.total-score-container{top:auto;bottom:1rem;right:1rem;}.section{padding:1.3rem;}.container{padding:1.2rem 1rem 4rem;}}
+</style>
+</head>
+<body>
+<div class="total-score-container"><div class="score-label">Puntuación</div><div class="score-number" id="totalScore">0%</div></div>
+<div class="header">
+  <div class="header-badge">Cuadernillo 13 · Nivel A1</div>
+  <h1>📖 VERBOS -ER e -IR 🗣️</h1>
+  <p>Español para Extranjeros · Regular -ER and -IR Verbs</p>
+  <div class="student-info">
+    <div class="info-field"><span>Nombre:</span><input type="text" placeholder="Tu nombre aquí"></div>
+    <div class="info-field"><span>País:</span><input type="text" placeholder="Tu país"></div>
+    <div class="info-field"><span>Fecha:</span><input type="text" placeholder="dd/mm/aaaa"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="autocorrect-banner"><span class="icon">🤖</span><div><strong>¡Cuadernillo autocorregible!</strong> Escribe tu respuesta y pulsa <em>Comprobar</em>. ✅ verde = correcto · ❌ rojo = incorrecto.</div></div>
+  <div class="tips-grid">
+    <div class="tip-card"><h3>💡 Recuerda del C3</h3><ul><li>Verbos -AR: habl<strong>o</strong>, habl<strong>as</strong>, habl<strong>a</strong>...</li><li>Hoy aprendemos -ER e -IR</li><li>Las terminaciones son casi iguales</li><li>Solo cambia la 1ª y 2ª persona plural</li></ul></div>
+    <div class="tip-card"><h3>🎯 Objetivos</h3><ul><li>Conjugar verbos -ER regulares</li><li>Conjugar verbos -IR regulares</li><li>Comparar -AR, -ER e -IR</li><li>Usar verbos comunes del día a día</li></ul></div>
+  </div>
+
+  <!-- GRAMMAR BOX: THE 3 TYPES -->
+  <div class="section">
+    <div class="section-title">📊 13.1 Las tres conjugaciones</div>
+    <div class="section-subtitle">The three verb types in Spanish</div>
+    <div class="compare-grid">
+      <div class="compare-card ar"><h5>-AR · HABLAR</h5><ul><li>habl<strong>o</strong></li><li>habl<strong>as</strong></li><li>habl<strong>a</strong></li><li>habl<strong>amos</strong></li><li>habl<strong>áis</strong></li><li>habl<strong>an</strong></li></ul></div>
+      <div class="compare-card er"><h5>-ER · COMER</h5><ul><li>com<strong>o</strong></li><li>com<strong>es</strong></li><li>com<strong>e</strong></li><li>com<strong>emos</strong></li><li>com<strong>éis</strong></li><li>com<strong>en</strong></li></ul></div>
+      <div class="compare-card ir"><h5>-IR · VIVIR</h5><ul><li>viv<strong>o</strong></li><li>viv<strong>es</strong></li><li>viv<strong>e</strong></li><li>viv<strong>imos</strong></li><li>viv<strong>ís</strong></li><li>viv<strong>en</strong></li></ul></div>
+    </div>
+    <div class="grammar-box"><h4>💡 La clave / The key</h4>
+      <p>-AR vs -ER/-IR: cambia la vocal → <strong>A</strong> → <strong>E</strong> (comes, ves, lees...)</p>
+      <p>-ER vs -IR: solo cambia nosotros/vosotros → com<strong>emos</strong>/com<strong>éis</strong> vs viv<strong>imos</strong>/viv<strong>ís</strong></p>
+    </div>
+    <div class="grammar-box"><h4>📝 Verbos -ER comunes / Common -ER verbs</h4>
+      <table><thead><tr><th>Infinitivo</th><th>English</th><th>Ejemplo</th></tr></thead><tbody>
+        <tr><td><strong>comer</strong></td><td>to eat</td><td>Como a las 2.</td></tr>
+        <tr><td><strong>beber</strong></td><td>to drink</td><td>Bebes mucha agua.</td></tr>
+        <tr><td><strong>leer</strong></td><td>to read</td><td>Lee el periódico.</td></tr>
+        <tr><td><strong>correr</strong></td><td>to run</td><td>Corremos por el parque.</td></tr>
+        <tr><td><strong>aprender</strong></td><td>to learn</td><td>Aprenden español.</td></tr>
+        <tr><td><strong>comprender</strong></td><td>to understand</td><td>¿Comprendéis?</td></tr>
+      </tbody></table>
+    </div>
+    <div class="grammar-box"><h4>📝 Verbos -IR comunes / Common -IR verbs</h4>
+      <table><thead><tr><th>Infinitivo</th><th>English</th><th>Ejemplo</th></tr></thead><tbody>
+        <tr><td><strong>vivir</strong></td><td>to live</td><td>Vivo en Madrid.</td></tr>
+        <tr><td><strong>escribir</strong></td><td>to write</td><td>Escribes bien.</td></tr>
+        <tr><td><strong>abrir</strong></td><td>to open</td><td>Abre la ventana.</td></tr>
+        <tr><td><strong>subir</strong></td><td>to go up</td><td>Subimos las escaleras.</td></tr>
+        <tr><td><strong>recibir</strong></td><td>to receive</td><td>Recibís cartas.</td></tr>
+        <tr><td><strong>describir</strong></td><td>to describe</td><td>Describen la ciudad.</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <!-- EXERCISE A: -ER verbs -->
+  <div class="section">
+    <div class="section-title">✏️ 13.2 Ejercicios verbos -ER</div>
+    <div class="section-subtitle">Practice -ER verbs</div>
+    <div class="exercise-label"><div class="badge">A</div> Conjuga el verbo COMER</div>
+    <div id="exA">
+      <div class="exercise-line"><div class="exercise-num">1</div><span class="exercise-text">Yo </span><input class="answer-input" data-answer="como" placeholder="..." style="width:100px;"><span class="exercise-text"> pollo. (comer)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">2</div><span class="exercise-text">Tú </span><input class="answer-input" data-answer="comes" placeholder="..." style="width:100px;"><span class="exercise-text"> mucha fruta. (comer)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">3</div><span class="exercise-text">Él </span><input class="answer-input" data-answer="come" placeholder="..." style="width:100px;"><span class="exercise-text"> en casa. (comer)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">4</div><span class="exercise-text">Nosotros </span><input class="answer-input" data-answer="comemos" placeholder="..." style="width:120px;"><span class="exercise-text"> juntos. (comer)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">5</div><span class="exercise-text">Vosotros </span><input class="answer-input" data-answer="coméis" placeholder="..." style="width:110px;"><span class="exercise-text"> tarde. (comer)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">6</div><span class="exercise-text">Ellos </span><input class="answer-input" data-answer="comen" placeholder="..." style="width:100px;"><span class="exercise-text"> pescado. (comer)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+    </div>
+    <button class="check-btn" onclick="checkFillIn('exA')">✅ Comprobar</button>
+    <div id="exA-score" class="score-display"></div>
+
+    <hr class="divider">
+    <div class="exercise-label"><div class="badge">B</div> Elige el verbo correcto y conjúgalo</div>
+    <p style="font-size:.83rem;color:var(--muted);margin-bottom:1rem;font-style:italic;font-weight:600;">Banco: leer · beber · correr · aprender · comprender</p>
+    <div id="exB">
+      <div class="exercise-line"><div class="exercise-num">1</div><span class="exercise-text">María </span><input class="answer-input" data-answer="lee" placeholder="..." style="width:100px;"><span class="exercise-text"> un libro cada semana. 📚</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">2</div><span class="exercise-text">Yo </span><input class="answer-input" data-answer="bebo" placeholder="..." style="width:100px;"><span class="exercise-text"> mucha agua. 💧</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">3</div><span class="exercise-text">Nosotros </span><input class="answer-input" data-answer="corremos" placeholder="..." style="width:120px;"><span class="exercise-text"> por el parque. 🏃</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">4</div><span class="exercise-text">Ellos </span><input class="answer-input" data-answer="aprenden" placeholder="..." style="width:120px;"><span class="exercise-text"> español rápido. 🇪🇸</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">5</div><span class="exercise-text">¿Tú </span><input class="answer-input" data-answer="comprendes" placeholder="..." style="width:140px;"><span class="exercise-text"> la gramática? 🤔</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+    </div>
+    <button class="check-btn" onclick="checkFillIn('exB')">✅ Comprobar</button>
+    <div id="exB-score" class="score-display"></div>
+  </div>
+
+  <!-- EXERCISE C-D: -IR verbs -->
+  <div class="section">
+    <div class="section-title">✏️ 13.3 Ejercicios verbos -IR</div>
+    <div class="section-subtitle">Practice -IR verbs</div>
+    <div class="exercise-label"><div class="badge">C</div> Conjuga el verbo VIVIR</div>
+    <div id="exC">
+      <div class="exercise-line"><div class="exercise-num">1</div><span class="exercise-text">Yo </span><input class="answer-input" data-answer="vivo" placeholder="..." style="width:100px;"><span class="exercise-text"> en España. (vivir)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">2</div><span class="exercise-text">Tú </span><input class="answer-input" data-answer="vives" placeholder="..." style="width:100px;"><span class="exercise-text"> en un piso. (vivir)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">3</div><span class="exercise-text">Ella </span><input class="answer-input" data-answer="vive" placeholder="..." style="width:100px;"><span class="exercise-text"> lejos. (vivir)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">4</div><span class="exercise-text">Nosotros </span><input class="answer-input" data-answer="vivimos" placeholder="..." style="width:120px;"><span class="exercise-text"> juntos. (vivir)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">5</div><span class="exercise-text">Vosotros </span><input class="answer-input" data-answer="vivís" placeholder="..." style="width:100px;"><span class="exercise-text"> bien. (vivir)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">6</div><span class="exercise-text">Ellos </span><input class="answer-input" data-answer="viven" placeholder="..." style="width:100px;"><span class="exercise-text"> en el campo. (vivir)</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+    </div>
+    <button class="check-btn" onclick="checkFillIn('exC')">✅ Comprobar</button>
+    <div id="exC-score" class="score-display"></div>
+
+    <hr class="divider">
+    <div class="exercise-label"><div class="badge">D</div> Completa con el verbo -IR correcto</div>
+    <p style="font-size:.83rem;color:var(--muted);margin-bottom:1rem;font-style:italic;font-weight:600;">Banco: escribir · abrir · subir · recibir · describir</p>
+    <div id="exD">
+      <div class="exercise-line"><div class="exercise-num">1</div><span class="exercise-text">Yo </span><input class="answer-input" data-answer="escribo" placeholder="..." style="width:110px;"><span class="exercise-text"> un email. ✉️</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">2</div><span class="exercise-text">Él </span><input class="answer-input" data-answer="abre" placeholder="..." style="width:100px;"><span class="exercise-text"> la puerta. 🚪</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">3</div><span class="exercise-text">Nosotros </span><input class="answer-input" data-answer="subimos" placeholder="..." style="width:120px;"><span class="exercise-text"> las escaleras. 🪜</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">4</div><span class="exercise-text">Ella </span><input class="answer-input" data-answer="recibe" placeholder="..." style="width:110px;"><span class="exercise-text"> muchos mensajes. 📱</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">5</div><span class="exercise-text">Vosotros </span><input class="answer-input" data-answer="describís" placeholder="..." style="width:120px;"><span class="exercise-text"> el cuadro. 🎨</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+    </div>
+    <button class="check-btn" onclick="checkFillIn('exD')">✅ Comprobar</button>
+    <div id="exD-score" class="score-display"></div>
+  </div>
+
+  <!-- EXERCISE E: mixed -AR -ER -IR -->
+  <div class="section">
+    <div class="section-title">🔀 13.4 Mezclando -AR, -ER, -IR</div>
+    <div class="section-subtitle">Mixed practice — all three types</div>
+    <div class="exercise-label"><div class="badge">E</div> Opción múltiple — ¿-AR, -ER o -IR?</div>
+    <div id="exE">
+      <div class="exercise-line" style="flex-direction:column;align-items:flex-start;">
+        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;"><div class="exercise-num">1</div><span class="exercise-text">Yo ___ en Madrid. (vivir)</span></div>
+        <div class="mc-options">
+          <button class="mc-option" data-correct="false" onclick="checkMC(this,'exE')">vivo<strong>s</strong></button>
+          <button class="mc-option" data-correct="true" onclick="checkMC(this,'exE')">viv<strong>o</strong></button>
+        </div>
+      </div>
+      <div class="exercise-line" style="flex-direction:column;align-items:flex-start;">
+        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;"><div class="exercise-num">2</div><span class="exercise-text">Nosotros ___ mucho. (aprender)</span></div>
+        <div class="mc-options">
+          <button class="mc-option" data-correct="false" onclick="checkMC(this,'exE')">aprend<strong>amos</strong></button>
+          <button class="mc-option" data-correct="true" onclick="checkMC(this,'exE')">aprend<strong>emos</strong></button>
+        </div>
+      </div>
+      <div class="exercise-line" style="flex-direction:column;align-items:flex-start;">
+        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;"><div class="exercise-num">3</div><span class="exercise-text">Vosotros ___ mucho. (escribir)</span></div>
+        <div class="mc-options">
+          <button class="mc-option" data-correct="true" onclick="checkMC(this,'exE')">escrib<strong>ís</strong></button>
+          <button class="mc-option" data-correct="false" onclick="checkMC(this,'exE')">escrib<strong>éis</strong></button>
+        </div>
+      </div>
+      <div class="exercise-line" style="flex-direction:column;align-items:flex-start;">
+        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;"><div class="exercise-num">4</div><span class="exercise-text">Ellos ___ agua. (beber)</span></div>
+        <div class="mc-options">
+          <button class="mc-option" data-correct="false" onclick="checkMC(this,'exE')">beb<strong>an</strong></button>
+          <button class="mc-option" data-correct="true" onclick="checkMC(this,'exE')">beb<strong>en</strong></button>
+        </div>
+      </div>
+      <div class="exercise-line" style="flex-direction:column;align-items:flex-start;">
+        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;"><div class="exercise-num">5</div><span class="exercise-text">Tú ___ la ventana. (abrir)</span></div>
+        <div class="mc-options">
+          <button class="mc-option" data-correct="true" onclick="checkMC(this,'exE')">abr<strong>es</strong></button>
+          <button class="mc-option" data-correct="false" onclick="checkMC(this,'exE')">abr<strong>as</strong></button>
+        </div>
+      </div>
+    </div>
+    <div id="exE-score" class="score-display"></div>
+
+    <hr class="divider">
+    <div class="exercise-label"><div class="badge">F</div> Traduce y escribe / Translate and write</div>
+    <div id="exF">
+      <div class="exercise-line"><div class="exercise-num">1</div><span class="exercise-text">She reads every day. → Ella </span><input class="answer-input" data-answer="lee" placeholder="..." style="width:100px;"><span class="exercise-text"> todos los días.</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">2</div><span class="exercise-text">We live in a house. → Nosotros </span><input class="answer-input" data-answer="vivimos" placeholder="..." style="width:120px;"><span class="exercise-text"> en una casa.</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">3</div><span class="exercise-text">They eat at 3. → Ellos </span><input class="answer-input" data-answer="comen" placeholder="..." style="width:100px;"><span class="exercise-text"> a las 3.</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">4</div><span class="exercise-text">You (tú) write letters. → Tú </span><input class="answer-input" data-answer="escribes" placeholder="..." style="width:120px;"><span class="exercise-text"> cartas.</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+      <div class="exercise-line"><div class="exercise-num">5</div><span class="exercise-text">I run in the morning. → Yo </span><input class="answer-input" data-answer="corro" placeholder="..." style="width:100px;"><span class="exercise-text"> por la mañana.</span><span class="feedback-icon">❓</span><span class="hint-text"></span></div>
+    </div>
+    <button class="check-btn" onclick="checkFillIn('exF')">✅ Comprobar</button>
+    <div id="exF-score" class="score-display"></div>
+
+    <hr class="divider">
+    <div class="exercise-label"><div class="badge">G</div> Escribe 5 frases sobre ti / Write 5 sentences about yourself</div>
+    <p style="font-size:.83rem;color:var(--muted);margin-bottom:.8rem;font-style:italic;font-weight:600;">Usa verbos -ER e -IR: vivir, comer, beber, leer, escribir, correr, aprender...</p>
+    <textarea class="open-area" placeholder="Vivo en... Como... Bebo... Leo... Aprendo..."></textarea>
+  </div>
+
+  <div class="self-check">
+    <h3>✅ Autoevaluación / Self-check</h3>
+    <div class="check-item"><p>Puedo conjugar verbos -ER regulares</p><div class="emoji-options"><button class="emoji-btn" onclick="selectEmoji(this)">😀</button><button class="emoji-btn" onclick="selectEmoji(this)">🙂</button><button class="emoji-btn" onclick="selectEmoji(this)">😐</button></div></div>
+    <div class="check-item"><p>Puedo conjugar verbos -IR regulares</p><div class="emoji-options"><button class="emoji-btn" onclick="selectEmoji(this)">😀</button><button class="emoji-btn" onclick="selectEmoji(this)">🙂</button><button class="emoji-btn" onclick="selectEmoji(this)">😐</button></div></div>
+    <div class="check-item"><p>Entiendo la diferencia entre -AR, -ER e -IR</p><div class="emoji-options"><button class="emoji-btn" onclick="selectEmoji(this)">😀</button><button class="emoji-btn" onclick="selectEmoji(this)">🙂</button><button class="emoji-btn" onclick="selectEmoji(this)">😐</button></div></div>
+    <div class="check-item"><p>Puedo usar verbos como vivir, leer, escribir, correr</p><div class="emoji-options"><button class="emoji-btn" onclick="selectEmoji(this)">😀</button><button class="emoji-btn" onclick="selectEmoji(this)">🙂</button><button class="emoji-btn" onclick="selectEmoji(this)">😐</button></div></div>
+  </div>
+  <div class="congrats">
+    <h2>🎉 ¡Excelente trabajo!</h2>
+    <p>Has completado el Cuadernillo 13!</p>
+    <div class="next-badge">🪞 Cuadernillo 14 → Me llamo y me levanto: Verbos Reflexivos</div>
+  </div>
+</div>
+<script>
+function normalizeAnswer(str){return str.trim().toLowerCase().replace(/á/g,'a').replace(/é/g,'e').replace(/í/g,'i').replace(/ó/g,'o').replace(/ú/g,'u').replace(/ü/g,'u').replace(/ñ/g,'n');}
+function checkFillIn(id){const s=document.getElementById(id);const inputs=s.querySelectorAll('.answer-input');let c=0;inputs.forEach(i=>{const u=normalizeAnswer(i.value);const a=normalizeAnswer(i.dataset.answer);const l=i.closest('.exercise-line');const fi=l.querySelector('.feedback-icon');const ht=l.querySelector('.hint-text');i.classList.remove('correct','wrong');fi.classList.remove('visible');ht.classList.remove('visible');if(u===a){i.classList.add('correct');fi.textContent='✅';fi.classList.add('visible');c++;}else if(u!==''){i.classList.add('wrong');fi.textContent='❌';fi.classList.add('visible');ht.textContent='→ '+i.dataset.answer;ht.classList.add('visible');}else{fi.textContent='❓';fi.classList.add('visible');}});if(Array.from(inputs).filter(i=>i.value.trim()!=='').length>0){const el=document.getElementById(id+'-score');const pct=Math.round((c/inputs.length)*100);el.innerHTML=(pct===100?'🎉':pct>=70?'👍':'💪')+' '+c+'/'+inputs.length+' correctas ('+pct+'%)';el.classList.add('visible');updateTotalScore();}}
+const mcScores={};function checkMC(btn,sId){const parent=btn.closest('.exercise-line');const buttons=parent.querySelectorAll('.mc-option');if(!mcScores[sId])mcScores[sId]={correct:0,total:0,answered:new Set()};const qId=Array.from(parent.parentElement.querySelectorAll('.exercise-line')).indexOf(parent);if(mcScores[sId].answered.has(qId))return;mcScores[sId].answered.add(qId);mcScores[sId].total++;if(btn.dataset.correct==='true'){btn.classList.add('correct');mcScores[sId].correct++;}else{btn.classList.add('wrong');buttons.forEach(b=>{if(b.dataset.correct==='true')b.classList.add('reveal-correct');});}buttons.forEach(b=>{b.style.pointerEvents='none';});const el=document.getElementById(sId+'-score');const s=mcScores[sId];const pct=Math.round((s.correct/s.total)*100);el.innerHTML=(pct===100?'🎉':pct>=70?'👍':'💪')+' '+s.correct+'/'+s.total+' correctas ('+pct+'%)';el.classList.add('visible');updateTotalScore();}
+function updateTotalScore(){let c=0,p=0;['exA','exB','exC','exD','exF'].forEach(id=>{const s=document.getElementById(id);if(s)s.querySelectorAll('.answer-input').forEach(i=>{if(i.value.trim()!==''){p++;if(i.classList.contains('correct'))c++;}});});Object.values(mcScores).forEach(s=>{c+=s.correct;p+=s.total;});const pct=p>0?Math.round((c/p)*100):0;document.getElementById('totalScore').textContent=pct+'%';document.querySelector('.total-score-container').style.borderColor=pct>=80?'#22C55E':pct>=60?'#F59E0B':'#0891B2';}
+function selectEmoji(btn){const g=btn.closest('.emoji-options');g.querySelectorAll('.emoji-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');}
+</script>
+</body>
+</html>
